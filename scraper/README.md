@@ -1,5 +1,8 @@
 ### TODO
 
-- [ ] scrape some problems statements using URL
+- [x] get 10+ problem title-slugs
+- [x] scrape some problems statements using URL
+- [x] store (some) problem statements in folder
+- [x] statements/{title_slug} contains problem statement in HTML
 - [ ] create a database of problem statements
-- [ ] samples for problems?
+- [x] samples for problems?
