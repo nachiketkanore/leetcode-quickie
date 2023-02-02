@@ -1,0 +1,4 @@
+1. You need to find some (i, j) such that nums[i] + nums[j] == target, where i < j
+2. target is known, hence iterating over nums[i] gives us the task of finding some nums[j] which equals 'target - nums[i]'
+3. You can store in map values like: { nums[index]: index } while traversing over all i
+4. Check if some nums[index] exists in the above map, and return the respective index found
