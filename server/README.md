@@ -4,7 +4,7 @@
 - [x] API for problems
 - [x] API for solutions
 - [ ] API for next random problem from collection
-- [ ] return html template response instead of dictionary
+- [ ] return html template response instead of dictionary OR render as HTML/markdown in frontend
 - [ ] benchmark server performance
 
 ### Running instructions
