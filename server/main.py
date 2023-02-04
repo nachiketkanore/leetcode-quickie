@@ -1,8 +1,22 @@
 from os.path import isfile
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import random
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:8000",
+    "http://localhost:3000"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = origins,
+    allow_credentials = True,
+    allow_methods = ["*"],
+    allow_headers = ["*"]
+)
 
 # items needed to be computed once at startup
 title_slugs: list[str] = []
@@ -50,7 +64,7 @@ async def get_statement(title_slug: str) -> str:
 async def get_solution(title_slug: str):
     if title_slug in solutions.keys():
         return solutions[title_slug]
-    return f'solution for {title_slug} not created yet'
+    return f'solution for this problem not created yet'
 
 @app.get("/next-problem-slug")
 async def get_random_problem() -> str:
